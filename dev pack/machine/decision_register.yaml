@@ -1,0 +1,195 @@
+schema_class: local_decision_ledger_not_canonical
+pack: CTO-DEV-PACK-001
+decisions:
+- id: CTO-D001
+  semantic_key: executive_operator_role
+  status: CONVERGED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D002
+  semantic_key: standalone_mac_docker
+  status: LOCKED_INITIAL
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D003
+  semantic_key: no_igorbot_openclaw
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D004
+  semantic_key: canonical_upstream
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D005
+  semantic_key: langgraph_runtime
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D006
+  semantic_key: reuse_control_plane_sdk
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D007
+  semantic_key: memoryservice_single_owner
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D008
+  semantic_key: distinct_cto_identity
+  status: LOCKED_REQUIREMENT
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D009
+  semantic_key: service_native_bootstrap
+  status: OPERATOR_LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D010
+  semantic_key: execution_readiness_proof
+  status: DESIGN_OBLIGATION_NOT_ADMITTED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D011
+  semantic_key: one_campaign_one_worker
+  status: LOCKED_FIRST_SLICE
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D012
+  semantic_key: stable_effect_reconciliation
+  status: LOCKED_INVARIANT
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D013
+  semantic_key: human_only_protected_merge
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D014
+  semantic_key: operational_consolidation_no_pe
+  status: LOCKED_INTENT_MIGRATION_UNPROVEN
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D015
+  semantic_key: branch_consolidation_reference
+  status: SELECTED_REFERENCE_INCOMPLETE
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D016
+  semantic_key: minimum_file_constraint
+  status: LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D017
+  semantic_key: recon_then_filetree_then_code
+  status: OPERATOR_LOCKED
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D018
+  semantic_key: copilot_review_sequence
+  status: LOCKED_PROCESS
+  source_refs:
+  - sources/CTO_Architecture_original.md
+  - sources/CTO_Locked_Filetree_2026-10-14.md
+  - docs/00_EXECUTIVE_CONTRACT.md
+  qualification: local developer pack only; admission separate
+- id: CTO-D019
+  semantic_key: agentpod_host_transport
+  status: OPERATOR_LOCKED_PROVIDER_FIT_UNPROVEN
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization
+- id: CTO-D020
+  semantic_key: authority_resolver_plus_root_autonomy_reuse
+  status: OPERATOR_LOCKED_BINDING_UNPROVEN
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization
+- id: CTO-D021
+  semantic_key: coordinator_and_worker_lease_separation
+  status: OPERATOR_LOCKED_HOST_EFFECT_UNPROVEN
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization
+- id: CTO-D022
+  semantic_key: cursor_cli_acp_via_agentpod
+  status: OPERATOR_LOCKED_ADAPTER_ABSENT
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization
+- id: CTO-D023
+  semantic_key: no_new_cto_repo
+  status: OPERATOR_LOCKED
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization
+- id: CTO-D024
+  semantic_key: host_reenforcement_no_terminal_bypass
+  status: OPERATOR_LOCKED_NEGATIVE_TEST_UNPROVEN
+  source_refs:
+  - sources/visible_user_turns_PARTIAL.jsonl
+  - docs/00_EXECUTIVE_CONTRACT.md
+  - docs/01_SOURCE_AUTHORITY_AND_FACTS.md
+  qualification: local operator decision; not canonical registration, executed proof or provider authorization

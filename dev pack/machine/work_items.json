@@ -1,0 +1,416 @@
+{
+  "pack": "CTO-DEV-PACK-001",
+  "schema_class": "local_implementation_plan_not_canonical",
+  "items": [
+    {
+      "id": "WP-00",
+      "phase": "F0",
+      "title": "Exact source/head and ownership census",
+      "dependencies": [],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/Quantum-L9/.github",
+        "https://github.com/Quantum-L9/l9-graphiti-memory"
+      ],
+      "execution_mode": "none",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-005"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-01",
+      "phase": "F1",
+      "title": "Implement CTO StateGraph and pure routing",
+      "dependencies": [
+        "WP-00"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "mock",
+      "status": "NOT_STARTED",
+      "tests": [
+        "CP-001",
+        "CP-004",
+        "CP-006"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-02",
+      "phase": "F1",
+      "title": "Service executor, bootstrap composition, checkpoints",
+      "dependencies": [
+        "WP-01"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "mock",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-001",
+        "BT-002",
+        "BT-008",
+        "RC-001",
+        "RC-003"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-03",
+      "phase": "F1",
+      "title": "CTO-domain test-first negative fixture suite",
+      "dependencies": [
+        "WP-00"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "mock",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-001",
+        "BT-014",
+        "IO-001",
+        "IO-004"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-04",
+      "phase": "F1",
+      "title": "Docker build/compose with checkpoint volume",
+      "dependencies": [
+        "WP-02"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "mock",
+      "status": "NOT_STARTED",
+      "tests": [
+        "RC-002",
+        "MS-008"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-05",
+      "phase": "F2",
+      "title": "Canonical CTO actor/surface admission",
+      "dependencies": [
+        "WP-00"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/.github"
+      ],
+      "execution_mode": "upstream_separate_authority",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-003",
+        "BT-004",
+        "BT-015"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-06",
+      "phase": "F2",
+      "title": "CTO operating binding and memory principal",
+      "dependencies": [
+        "WP-05"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/Quantum-L9/l9-graphiti-memory"
+      ],
+      "execution_mode": "admission_dependent",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-010",
+        "MS-001",
+        "MS-002",
+        "BT-016",
+        "MS-013"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-07",
+      "phase": "F3",
+      "title": "AgentPod Hub MCP/APN and Cursor ACP fit/owner proof",
+      "dependencies": [
+        "WP-00"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/SuperJackfruitLabs/agentpod"
+      ],
+      "execution_mode": "read_only_recon",
+      "status": "NOT_STARTED",
+      "tests": [
+        "IO-013",
+        "MS-009",
+        "IO-018",
+        "IO-019",
+        "IO-022"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-08",
+      "phase": "F3",
+      "title": "Root Autonomy mediated host operation journal",
+      "dependencies": [
+        "WP-06",
+        "WP-07"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "host_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "IO-002",
+        "IO-003",
+        "IO-005",
+        "IO-023",
+        "IO-024"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-09",
+      "phase": "F3",
+      "title": "AgentPod Cursor ACP and Claude station real canaries",
+      "dependencies": [
+        "WP-08",
+        "WP-17",
+        "WP-18"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "host_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "IO-007",
+        "IO-009",
+        "IO-015",
+        "IO-020",
+        "IO-021",
+        "IO-025"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-10",
+      "phase": "F3",
+      "title": "CTO AgentPod MCP dispatch / observe-first integration",
+      "dependencies": [
+        "WP-02",
+        "WP-09",
+        "WP-18"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "host_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "IO-004",
+        "RC-003",
+        "RC-009",
+        "IO-017",
+        "IO-024"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-11",
+      "phase": "F4",
+      "title": "MemorySDK/MemoryService CTO identity integration",
+      "dependencies": [
+        "WP-06"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/Quantum-L9/l9-graphiti-memory"
+      ],
+      "execution_mode": "memory_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "MS-001",
+        "MS-002",
+        "MS-010"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-12",
+      "phase": "F4",
+      "title": "Real single-worker bounded source mutation fixture",
+      "dependencies": [
+        "WP-10",
+        "WP-11"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "scoped_live",
+      "status": "NOT_STARTED",
+      "tests": [
+        "CP-011",
+        "IO-014",
+        "RC-005"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-13",
+      "phase": "F4",
+      "title": "Publish path and human merge gate proof",
+      "dependencies": [
+        "WP-12"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "protected_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "PB-001",
+        "PB-002",
+        "PB-003",
+        "PB-011"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-14",
+      "phase": "F5",
+      "title": "Run complete reference Branch Consolidation campaign",
+      "dependencies": [
+        "WP-13"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/Quantum-L9/.github",
+        "https://github.com/Quantum-L9/l9-graphiti-memory"
+      ],
+      "execution_mode": "separately_authorized",
+      "status": "NOT_STARTED",
+      "tests": [
+        "PB-006",
+        "PB-007",
+        "PB-008",
+        "PB-010"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-15",
+      "phase": "F6",
+      "title": "Reboot, backup, revoke and operational hardening",
+      "dependencies": [
+        "WP-12"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "live_environment",
+      "status": "NOT_STARTED",
+      "tests": [
+        "RC-004",
+        "RC-007",
+        "BT-009"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-16",
+      "phase": "F6",
+      "title": "Final no-shadow review and delivery evidence",
+      "dependencies": [
+        "WP-14",
+        "WP-15"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "review_only",
+      "status": "NOT_STARTED",
+      "tests": [
+        "PB-010"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "All work remains NOT_STARTED. AgentPod upstream source read-only unless separately granted. F1 mock-only; no pack-supplied execution rights."
+    },
+    {
+      "id": "WP-17",
+      "phase": "F3",
+      "title": "AgentPod Cursor ACP station descriptor or proven mediated alternative",
+      "dependencies": [
+        "WP-07"
+      ],
+      "repository_dependencies": [
+        "https://github.com/SuperJackfruitLabs/agentpod",
+        "https://github.com/Quantum-L9/Cursor-Governance"
+      ],
+      "execution_mode": "source_then_owner_authorized_provider",
+      "status": "NOT_STARTED",
+      "tests": [
+        "IO-019",
+        "IO-020",
+        "IO-025"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "AgentPod repo read-only for CTO implementation; separate upstream authorization required to mutate."
+    },
+    {
+      "id": "WP-18",
+      "phase": "F3",
+      "title": "Host-side L9 gate against AgentPod privilege bypass",
+      "dependencies": [
+        "WP-06",
+        "WP-08"
+      ],
+      "repository_dependencies": [
+        "https://github.com/Quantum-L9/Cursor-Governance",
+        "https://github.com/SuperJackfruitLabs/agentpod"
+      ],
+      "execution_mode": "scoped_after_owner_proof",
+      "status": "NOT_STARTED",
+      "tests": [
+        "BT-017",
+        "BT-018",
+        "IO-017",
+        "IO-018",
+        "IO-022",
+        "IO-026",
+        "PB-011"
+      ],
+      "description_ref": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "admission_note": "No root terminal, general fs.write, new scheduler, or credential leakage. Separate provider write scope if needed."
+    }
+  ]
+}

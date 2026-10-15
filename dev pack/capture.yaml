@@ -1,0 +1,262 @@
+schema: l9.arch-expression.capture-local/v1
+subject:
+  ref: l9-cto-mac-docker-executive
+  scope: available_documents_and_visible_user_decisions_only
+  semantic_owner: separate_canonical_owner_not_assumed
+source:
+  path: sources/visible_user_turns_PARTIAL.jsonl
+  sha256: 540a752b3ef7a63c34b6d36a42898ed2192e01a5808ef491925678b1d479b90f
+  completeness: partial
+  accessibility: bundled
+  independent_access_ref: null
+canonical:
+  repository: Quantum-L9/.github
+  revision: d4397e53f8f4c23458a80f87db9552463ad9e26f
+  resolution: partial
+  receipt_ref: null
+  sources: []
+message_coverage:
+- message_id: visible-user-01
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC01
+- message_id: visible-user-02
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC02
+- message_id: visible-user-03
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC03
+- message_id: visible-user-04
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC04
+- message_id: visible-user-05
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC05
+- message_id: visible-user-06
+  assessment: material
+  note: Explicit visible operator sequencing, selection, readiness criterion or packaging instruction
+  claim_ids:
+  - VC06
+- message_id: visible-user-07
+  assessment: material
+  note: New visible operator decision or decision-forming question; captured conservatively
+  claim_ids:
+  - VC07
+- message_id: visible-user-08
+  assessment: material
+  note: New visible operator decision or decision-forming question; captured conservatively
+  claim_ids:
+  - VC08
+- message_id: visible-user-09
+  assessment: material
+  note: New visible operator decision or decision-forming question; captured conservatively
+  claim_ids:
+  - VC09
+- message_id: visible-user-10
+  assessment: material
+  note: New visible operator decision or decision-forming question; captured conservatively
+  claim_ids:
+  - VC10
+- message_id: visible-user-11
+  assessment: material
+  note: New visible operator decision or decision-forming question; captured conservatively
+  claim_ids:
+  - VC11
+claims:
+- id: VC01
+  semantic_key: process.recon_then_filetree
+  statement: No coding before recon and filetree
+  disposition: converged
+  material: true
+  decision_basis: user_decision
+  evidence:
+  - message_id: visible-user-01
+    quote: Before we do any coding
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/process_order
+  superseded_by: null
+- id: VC02
+  semantic_key: process.environment_recon
+  statement: Inspect CTO interaction with Cursor-Governance before implementation
+  disposition: converged
+  material: true
+  decision_basis: user_decision
+  evidence:
+  - message_id: visible-user-02
+    quote: Now do deep recon
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/environment_recon
+  superseded_by: null
+- id: VC03
+  semantic_key: bootstrap.different_lifecycle_question
+  statement: Determine whether CTO service bootstrap differs from IDE and Claude
+  disposition: unknown
+  material: true
+  decision_basis: unresolved
+  evidence:
+  - message_id: visible-user-03
+    quote: Would cto bootstrap
+  semantic_owner: operator_designed_cto_architecture
+  expression: []
+  superseded_by: null
+- id: VC04
+  semantic_key: filetree.operator_lock
+  statement: Operator accepts filetree phase after bootstrap decision
+  disposition: converged
+  material: true
+  decision_basis: user_acceptance
+  evidence:
+  - message_id: visible-user-04
+    quote: Lock it in. Filetree
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/locked_filetree
+  superseded_by: null
+- id: VC05
+  semantic_key: readiness.independent_proof
+  statement: Real readiness must demonstrably cover identity, delegation, worker interface and recovery
+  disposition: converged
+  material: true
+  decision_basis: user_decision
+  evidence:
+  - message_id: visible-user-05
+    quote: Real readiness must mean
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/readiness_evidence
+  superseded_by: null
+- id: VC06
+  semantic_key: delivery.developer_pack
+  statement: Provide granular, comprehensive architecture/build developer pack
+  disposition: converged
+  material: true
+  decision_basis: user_decision
+  evidence:
+  - message_id: visible-user-06
+    quote: Comprehensive, complete and granularly detailed developer pack
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/developer_pack
+  superseded_by: null
+- id: VC07
+  semantic_key: host.agentpod_candidate_question
+  statement: Consider APN as CTO Mac host-control transport
+  disposition: unknown
+  material: true
+  decision_basis: unresolved
+  evidence:
+  - message_id: visible-user-07
+    quote: Can we use apn for the controls host?
+  semantic_owner: operator_designed_cto_architecture
+  expression: []
+  superseded_by: null
+- id: VC08
+  semantic_key: host.agentpod_candidate_choice
+  statement: Clarify AgentPod as candidate agent control surface for Cursor
+  disposition: proposed
+  material: true
+  decision_basis: user_acceptance
+  evidence:
+  - message_id: visible-user-08
+    quote: Yeah agentpod.
+  semantic_owner: operator_designed_cto_architecture
+  expression: []
+  superseded_by: null
+- id: VC09
+  semantic_key: host.agentpod_lock
+  statement: Accept AgentPod host-control architecture
+  disposition: converged
+  material: true
+  decision_basis: user_acceptance
+  evidence:
+  - message_id: visible-user-09
+    quote: Lock it in.
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/agentpod_selected
+  superseded_by: null
+- id: VC10
+  semantic_key: authority.reuse_question
+  statement: Accept using existing Authority Resolver, subject to owner evidence
+  disposition: converged
+  material: true
+  decision_basis: user_acceptance
+  evidence:
+  - message_id: visible-user-10
+    quote: Yes agreed.
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/authority_resolver_reuse
+  superseded_by: null
+- id: VC11
+  semantic_key: authority.autonomy_lock
+  statement: Lock reuse of Cursor-Governance existing autonomy controls and update plan
+  disposition: converged
+  material: true
+  decision_basis: user_acceptance
+  evidence:
+  - message_id: visible-user-11
+    quote: Lock it in.
+  semantic_owner: operator_designed_cto_architecture
+  expression:
+  - path: expression/visible_operator_decisions_candidate.yaml
+    pointer: /claims/root_autonomy_reuse
+  superseded_by: null
+artifacts:
+- path: expression/visible_operator_decisions_candidate.yaml
+  sha256: ac99aff15369733940049c75e2d23bb9c497ccd52f0a9d0ebe2af35e292ed584
+  authority_class: candidate
+  non_semantic_pointers: []
+unknowns:
+- id: SOURCE-GAP-01
+  question: Full independently enumerable original conversation boundaries and messages not supplied
+  owner: original conversation export / operator
+  blocking: true
+  resolution_needed: Original complete export plus independent blind reviewer
+- id: AUTH-UNKNOWN-01
+  question: Canonical CTO actor/surface and projection receipt not admitted
+  owner: Quantum-L9/.github + projection/identity producers
+  blocking: true
+  resolution_needed: Qualified upstream resolution and admission
+- id: AGENTPOD-CTO-BOUNDARY
+  question: AgentPod Cursor ACP descriptor, scoped Hub agent principal and host-side effect reauthorization have not
+    been admitted or executed
+  owner: AgentPod provider + Cursor-Governance root autonomy
+  blocking: true
+  resolution_needed: Actual producer permissions, host canaries, idempotency and negative tests
+coverage:
+  material_claim_ids:
+  - VC01
+  - VC02
+  - VC03
+  - VC04
+  - VC05
+  - VC06
+  - VC07
+  - VC08
+  - VC09
+  - VC10
+  - VC11
+  reviewed_full_source: false
+  external_omission_review: not_run
+independent_reconstruction:
+  status: not_run
+  comparison_ref: null

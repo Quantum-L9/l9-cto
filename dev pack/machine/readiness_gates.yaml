@@ -1,0 +1,70 @@
+pack: CTO-DEV-PACK-001
+classification: implementation_obligations_not_canonical_law
+startup_does_not_authorize_effect: true
+mandatory_for_live_worker:
+- G1
+- G2
+- G3
+- G4
+conditional_required_for_memory_dependent_operation:
+- G5
+fail_closed_on:
+- FAIL
+- UNKNOWN
+- STALE
+gates:
+- id: G1
+  obligation: canonical_identity
+  tests:
+  - BT-002
+  - BT-003
+  - BT-004
+  - BT-010
+  - BT-015
+  - BT-016
+  test_status: NOT_RUN
+- id: G2
+  obligation: current_operation_delegation
+  tests:
+  - BT-006
+  - BT-007
+  - BT-009
+  - BT-017
+  - BT-018
+  test_status: NOT_RUN
+- id: G3
+  obligation: authenticated_real_worker_and_host_journal
+  tests:
+  - IO-007
+  - IO-008
+  - IO-013
+  - IO-015
+  - IO-017
+  - IO-018
+  - IO-019
+  - IO-020
+  - IO-021
+  - IO-022
+  - IO-025
+  - IO-026
+  test_status: NOT_RUN
+- id: G4
+  obligation: durable_reconciliation_no_replay
+  tests:
+  - IO-002
+  - IO-003
+  - IO-004
+  - RC-003
+  - RC-004
+  - IO-023
+  - IO-024
+  test_status: NOT_RUN
+- id: G5
+  obligation: scoped_memory_principal_when_required
+  tests:
+  - MS-001
+  - MS-002
+  - MS-003
+  - MS-010
+  - MS-013
+  test_status: NOT_RUN

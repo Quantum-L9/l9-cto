@@ -1,0 +1,816 @@
+{
+  "pack": "CTO-DEV-PACK-001",
+  "status": "DESIGNED_NOT_RUN",
+  "cases": [
+    {
+      "id": "BT-001",
+      "level": "unit",
+      "scenario": "Docker process boots, source pin absent",
+      "expected": "inspectable service, `AUTHORITY_UNTRUSTED`, no worker request",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-002",
+      "level": "unit",
+      "scenario": "actor string `l-cto` present only in env",
+      "expected": "no canonical identity, effect denied",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-003",
+      "level": "integration",
+      "scenario": "admitted actor, omitted service surface",
+      "expected": "fail closed, no role alias",
+      "phase": "F2",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-004",
+      "level": "integration",
+      "scenario": "valid actor/surface, wrong projection digest",
+      "expected": "no acceptance, source conflict shown",
+      "phase": "F2",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-005",
+      "level": "unit",
+      "scenario": "two mismatched `.github` revisions supplied",
+      "expected": "reject mixed authority closure",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-006",
+      "level": "integration",
+      "scenario": "authentic identity, expired delegation",
+      "expected": "host denies operation; no process spawn",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-007",
+      "level": "integration",
+      "scenario": "valid grant but wrong repo/write paths",
+      "expected": "host denies before worktree",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-008",
+      "level": "unit",
+      "scenario": "valid source but missing runtime checkpoint volume",
+      "expected": "no live READY; named recovery error",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-009",
+      "level": "integration",
+      "scenario": "bootstrap successful then revoke grant",
+      "expected": "next attempted operation denied by host",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-010",
+      "level": "unit",
+      "scenario": "Claude worker identity substituted for CTO",
+      "expected": "reject actor mismatch, no memory cross-auth",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-011",
+      "level": "integration",
+      "scenario": "real host worker reports project settings missing",
+      "expected": "deny; no shadow policy fallback",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-012",
+      "level": "integration",
+      "scenario": "duplicate active CTO commander for campaign",
+      "expected": "exclusive claim blocks second writer",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-013",
+      "level": "integration",
+      "scenario": "installed SDK pin/version mismatch",
+      "expected": "worker unavailable, explicit report",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-014",
+      "level": "unit",
+      "scenario": "stale previous READY receipt",
+      "expected": "action revalidates and blocks",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-001",
+      "level": "unit",
+      "scenario": "campaign missing explicit objective/acceptance",
+      "expected": "stage blocked, no action selected",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-002",
+      "level": "unit",
+      "scenario": "campaign references nonexistent native contract",
+      "expected": "precise missing owner/ref, not a new schema",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-003",
+      "level": "unit",
+      "scenario": "native contract structurally valid but no permission",
+      "expected": "denied at host-authority seam",
+      "phase": "F1/F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-004",
+      "level": "unit",
+      "scenario": "stage predecessor not accepted",
+      "expected": "no stage advancement or worker spawn",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-005",
+      "level": "integration",
+      "scenario": "target SHA moved after intake",
+      "expected": "invalidates target evidence; revalidate before effect",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-006",
+      "level": "unit",
+      "scenario": "LLM recommends out-of-scope mutation",
+      "expected": "deterministic gate denies, record observation",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-007",
+      "level": "unit",
+      "scenario": "stale memory recalls superseded decision",
+      "expected": "current canonical source prevails, stale note surfaced",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-008",
+      "level": "unit",
+      "scenario": "unresolved architectural contradiction",
+      "expected": "escalation; no frozen-envelope rewrite",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-009",
+      "level": "integration",
+      "scenario": "wrong target worktree owner",
+      "expected": "no foreign dirty file touched",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-010",
+      "level": "unit",
+      "scenario": "reference pack missing three native directories",
+      "expected": "inspection only; exact blockers listed",
+      "phase": "F1/F5",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-011",
+      "level": "integration",
+      "scenario": "independent review absent",
+      "expected": "worker success but `VERIFY_PENDING`",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "CP-012",
+      "level": "integration",
+      "scenario": "PR head changed after successful CI",
+      "expected": "invalidate affected CI/review/acceptance",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-001",
+      "level": "unit",
+      "scenario": "first valid mock operation",
+      "expected": "one durable acceptance, exactly one simulated launch",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-002",
+      "level": "unit",
+      "scenario": "identical operation ID + identical fingerprint",
+      "expected": "return existing operation; spawn count still one",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-003",
+      "level": "unit",
+      "scenario": "identical ID + different digest",
+      "expected": "conflict denied, no spawn",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-004",
+      "level": "fault",
+      "scenario": "host executed effect but submit ACK lost",
+      "expected": "CTO `observe` first, no second effect",
+      "phase": "F1 mock; F3 host",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-005",
+      "level": "fault",
+      "scenario": "host dies after durable accepted record, before spawn",
+      "expected": "resume reconciles state without unsafe double-spawn",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-006",
+      "level": "fault",
+      "scenario": "host dies after spawn, before writing terminal",
+      "expected": "observed process/external state reconciled, unknown preserved",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-007",
+      "level": "integration",
+      "scenario": "real SDK receives read-only canary",
+      "expected": "actual ResultMessage, journal, no repo mutation",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-008",
+      "level": "integration",
+      "scenario": "fake SDK `success` with no host process",
+      "expected": "not eligible for `LIVE-PROVED` or accepted",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-009",
+      "level": "integration",
+      "scenario": "unauthorized attempt to set bypassPermissions",
+      "expected": "adapter/host refuses; project hooks remain",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-010",
+      "level": "integration",
+      "scenario": "host worktree fails to create",
+      "expected": "preserve rejection, no execution",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-011",
+      "level": "integration",
+      "scenario": "request exceeds worker budget/turn bounds",
+      "expected": "refusal or bounded stop with accurate terminal cause",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-012",
+      "level": "fault",
+      "scenario": "cancellation after side effect",
+      "expected": "report uncertain until Git/effect reconciliation",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-013",
+      "level": "security",
+      "scenario": "DTO contains arbitrary host shell command",
+      "expected": "command not executed; fixed owner-controlled executable only",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-014",
+      "level": "integration",
+      "scenario": "SDK default report overwritten by next task",
+      "expected": "prior operation evidence preserved by unique journal refs",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-015",
+      "level": "integration",
+      "scenario": "signed token/grant not readable by worker UID",
+      "expected": "OS boundary denies, not just hook denial",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-016",
+      "level": "fault",
+      "scenario": "lease expires while worker still alive",
+      "expected": "new effects denied; observe/cancel or escalate per contract",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-001",
+      "level": "unit",
+      "scenario": "checkpoint with `thread_id` restored by second instance",
+      "expected": "state resumes from next node, no repeated node 1",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-002",
+      "level": "integration",
+      "scenario": "container deleted and recreated",
+      "expected": "checkpoint survives named volume, same campaign",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-003",
+      "level": "fault",
+      "scenario": "CTO crashes just after host accepts",
+      "expected": "on return observe by same op id before submit",
+      "phase": "F1/F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-004",
+      "level": "fault",
+      "scenario": "Mac reboot with host worker interrupted",
+      "expected": "checkpoint + host journal + remote effect reconciled",
+      "phase": "F6",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-005",
+      "level": "unit",
+      "scenario": "checkpoint reports success, GitHub effect absent",
+      "expected": "acceptance blocked despite graph state",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-006",
+      "level": "fault",
+      "scenario": "journal record absent but legacy worker possibly ran",
+      "expected": "unknown/escalate, no inference of safe retry",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-007",
+      "level": "unit",
+      "scenario": "checkpoint corrupt/unreadable",
+      "expected": "fail closed for unresolved effect, diagnostics preserved",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-008",
+      "level": "integration",
+      "scenario": "different logical campaign tries reused thread id",
+      "expected": "identity mismatch denied or isolated",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-009",
+      "level": "integration",
+      "scenario": "task immutable fingerprint changes during restart",
+      "expected": "reject replay conflict, rebind through authority",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "RC-010",
+      "level": "fault",
+      "scenario": "network unavailable to GitHub after worker result",
+      "expected": "`VERIFY_PENDING`, no completion or risky duplicate",
+      "phase": "F3/F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-001",
+      "level": "integration",
+      "scenario": "signed CTO principal hydrates allowed namespace",
+      "expected": "authorized data and provenance returned",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-002",
+      "level": "integration",
+      "scenario": "CTO attempts another private namespace",
+      "expected": "MemoryService denies",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-003",
+      "level": "integration",
+      "scenario": "Claude principal presented as CTO",
+      "expected": "actor assertion/grant mismatch denied",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-004",
+      "level": "integration",
+      "scenario": "memory bound package differs from v2.6.0 pinned contract",
+      "expected": "runtime binding reports unbound or compatible only as actually allowed",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-005",
+      "level": "unit",
+      "scenario": "optional memory transport outage",
+      "expected": "honest degraded status; permitted read-only actions continue",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-006",
+      "level": "unit",
+      "scenario": "mandatory memory dependency outage",
+      "expected": "stage does not execute",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-007",
+      "level": "integration",
+      "scenario": "unverified worker prose offered as shared fact",
+      "expected": "governed write/promotion rejected or deferred",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-008",
+      "level": "security",
+      "scenario": "CTO container tries Docker socket or Mac home",
+      "expected": "denied by actual runtime mount/privilege boundary",
+      "phase": "F1/F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-009",
+      "level": "security",
+      "scenario": "worker attempts to read human grant issuer file",
+      "expected": "OS denies, even without hook",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-010",
+      "level": "integration",
+      "scenario": "stale signed memory assertion",
+      "expected": "MemoryService refuses writes and reports exact cause",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-011",
+      "level": "unit",
+      "scenario": "no context matches search",
+      "expected": "empty result distinguished from transport/service failure",
+      "phase": "F1",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-012",
+      "level": "integration",
+      "scenario": "memory write approved but externally verified source later revoked",
+      "expected": "supersession/reconciliation, not silent global truth",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-001",
+      "level": "integration",
+      "scenario": "authorized test PR publisher path",
+      "expected": "actual PR created/reused, exact head and base recorded",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-002",
+      "level": "security",
+      "scenario": "green CI but no human exact-head merge grant",
+      "expected": "`MERGE_PENDING`, no merge",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-003",
+      "level": "security",
+      "scenario": "spoofed agent-written merge receipt",
+      "expected": "merge effect denied",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-004",
+      "level": "integration",
+      "scenario": "PR head moves after issued grant",
+      "expected": "grant invalid at changed head",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-005",
+      "level": "integration",
+      "scenario": "stacked PR merge candidate",
+      "expected": "ancestry-safe method under applicable grant; no guessed squash",
+      "phase": "F5",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-006",
+      "level": "integration",
+      "scenario": "two worker branches overlap",
+      "expected": "dedicated worktrees and claim conflict/controlled integration",
+      "phase": "F5 later",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-007",
+      "level": "campaign",
+      "scenario": "five worker results individually green; integrated result breaks",
+      "expected": "integration repair + full relevant reverification",
+      "phase": "F5 later",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-008",
+      "level": "campaign",
+      "scenario": "post-merge hosted Claude activation missing",
+      "expected": "no reference campaign closure",
+      "phase": "F5",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-009",
+      "level": "campaign",
+      "scenario": "missing native contract directory",
+      "expected": "no executable reference delegation",
+      "phase": "F5",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-010",
+      "level": "campaign",
+      "scenario": "final all-stage acceptance current and independently observed",
+      "expected": "exact `COMPLETED_VERIFIED` with citations",
+      "phase": "F5",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-015",
+      "level": "integration",
+      "scenario": "Authority Resolver selects source revision but producer-verifiable assertion missing",
+      "expected": "no CTO effect; explicitly mark identity untrusted",
+      "phase": "F2",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-016",
+      "level": "integration",
+      "scenario": "AgentPod agent principal passed off as canonical CTO actor",
+      "expected": "deny: Hub principal does not substitute ActorIdentity",
+      "phase": "F2",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-017",
+      "level": "integration",
+      "scenario": "Gateway grants capability then upstream role or lease revoked before host effect",
+      "expected": "host rechecks, denies effect, no worker spawn",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "BT-018",
+      "level": "security",
+      "scenario": "CTO coordinator tries to perform worker repository write directly",
+      "expected": "role capability denies; only separately leased worker can mutate",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-017",
+      "level": "integration",
+      "scenario": "AgentPod dispatch submitted without current root L9 authorization",
+      "expected": "host effect denied; no station task",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-018",
+      "level": "security",
+      "scenario": "CTO AgentPod principal requests general terminal or fs.write",
+      "expected": "deny at Hub/host policy; cannot reach unconfined host shell",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-019",
+      "level": "integration",
+      "scenario": "Cursor CLI present but AgentPod registry has no Cursor ACP station descriptor",
+      "expected": "reports worker unsupported; no READY from node online",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-020",
+      "level": "integration",
+      "scenario": "AgentPod Cursor ACP read-only canary with project policy",
+      "expected": "real session new/prompt/updates/cancel, project rules present, effect scope enforced",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-021",
+      "level": "integration",
+      "scenario": "AgentPod Claude Code station canary with native L9 code contract",
+      "expected": "real read-only session, hooks and per-task lease verified; outcome observed",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-022",
+      "level": "security",
+      "scenario": "CTO presents AgentPod fleet/operator token or APN node secret",
+      "expected": "hub agent-scope route refuses identity/permission confusion",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-023",
+      "level": "fault",
+      "scenario": "APN disconnect after host accepted same operation ID",
+      "expected": "reconnect observes existing op; spawn count exactly one",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-024",
+      "level": "fault",
+      "scenario": "Hub reconnect with request replay and original receipt delayed",
+      "expected": "journal id+digest enforces idempotency; no second external effect",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-025",
+      "level": "security",
+      "scenario": "ACP permission auto-answer allow-always without L9 grant",
+      "expected": "host denies privileged tool irrespective of ACP answer",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "IO-026",
+      "level": "security",
+      "scenario": "ACP/Claude station cannot consult current host-side L9 gateway",
+      "expected": "deny real effect; only mock/no-op remains",
+      "phase": "F3",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "MS-013",
+      "level": "security",
+      "scenario": "AgentPod Hub principal credential used as MemoryService author identity",
+      "expected": "MemoryService signed assertion required; cross-principal write denied",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "PB-011",
+      "level": "security",
+      "scenario": "AgentPod privileged shell route attempts protected merge grant",
+      "expected": "no host grant access or merge; stop MERGE_PENDING",
+      "phase": "F4",
+      "status": "NOT_RUN",
+      "evidence": null
+    }
+  ]
+}

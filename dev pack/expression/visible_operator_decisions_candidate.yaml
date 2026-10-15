@@ -1,0 +1,14 @@
+schema: l9.cto.visible-operator-decisions-local-candidate/v1
+claims:
+  process_order: The operator requires reconnaissance followed by filetree before any coding.
+  environment_recon: Inspect the current Cursor-Governance environment and actual CTO interaction seams before implementation.
+  locked_filetree: The operator accepts the filetree stage following the service-native bootstrap decision.
+  readiness_evidence: Live readiness requires demonstrable canonical identity, scoped delegation, real worker interface
+    and safe recovery, not Docker/memory health.
+  developer_pack: Produce a complete granular architecture and build developer pack.
+  agentpod_selected: Selected host-control transport is AgentPod Hub agent MCP through enrolled APN Mac node, subject
+    to provider fit and enforcement proof.
+  authority_resolver_reuse: Use the existing L9 Authority Resolver to obtain bounded, revision-specific authoritative
+    semantic context without issuing execution grants.
+  root_autonomy_reuse: Reuse Cursor-Governance root AutonomyRuntime and AdapterOrchestrator as sole campaign execution
+    authorization, not a new CTO permission engine.

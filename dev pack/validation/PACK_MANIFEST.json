@@ -1,0 +1,198 @@
+{
+  "pack_id": "CTO-DEV-PACK-001",
+  "edition": "1.1",
+  "date": "2026-10-14",
+  "assurance": "LOCAL_CONTENT_INTEGRITY_NOT_CANONICAL_ADMISSION",
+  "files": [
+    {
+      "path": "CTO_MASTER_SPEC.md",
+      "bytes": 163794,
+      "sha256": "80933cf959b11d9416ffa233fa3dd52c0242576d752a1459ce4f4045a0fec988"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7619,
+      "sha256": "bb05ee6411e343817776178e4cbd722d7a8baa4c4b8ce3291fc27f318ffb27d0"
+    },
+    {
+      "path": "capture.yaml",
+      "bytes": 8731,
+      "sha256": "d704f8c45a919f1d63da788775df9ca95546c19bbc3155819d0f5df13a396107"
+    },
+    {
+      "path": "docs/00_EXECUTIVE_CONTRACT.md",
+      "bytes": 8968,
+      "sha256": "922cdbb07d721c1034da7b75cc5342392974710571437ac2ffa1f823a4bc3002"
+    },
+    {
+      "path": "docs/01_SOURCE_AUTHORITY_AND_FACTS.md",
+      "bytes": 11256,
+      "sha256": "f7956f9874c8d178209af11f978df1532f6180b0d08409ac71788916b86174f4"
+    },
+    {
+      "path": "docs/02_SYSTEM_ARCHITECTURE.md",
+      "bytes": 10712,
+      "sha256": "0bd124eeba24ab939042d17cabf09e2db68e28c607bb4cb4efb6562ebb5e6aae"
+    },
+    {
+      "path": "docs/03_BOOTSTRAP_AND_READINESS.md",
+      "bytes": 12198,
+      "sha256": "e60ae45d82b1028f205508ec6bd241f9026e74f76753b5d62fd74746c8c1e232"
+    },
+    {
+      "path": "docs/04_CAMPAIGN_AND_STATE_MACHINE.md",
+      "bytes": 7472,
+      "sha256": "a3b8a7335610412c2abca0d3d5c564088d5160d164ea8fc85b51d41317babbd7"
+    },
+    {
+      "path": "docs/05_HOST_WORKER_PORT_AND_EFFECTS.md",
+      "bytes": 13073,
+      "sha256": "49fbc0ba9ec6ec90eec9e12b374330cf31a1e5ff0f0932fa052425a593b070a4"
+    },
+    {
+      "path": "docs/06_MEMORY_SECURITY_AND_PERMISSIONS.md",
+      "bytes": 8775,
+      "sha256": "beaa117ce7e654195e19e34f501c9bb8946509bf66196b2821144ee22fdc389b"
+    },
+    {
+      "path": "docs/07_LOCKED_FILETREE.md",
+      "bytes": 11363,
+      "sha256": "600efc07a0a7c3ec09e24148fd24d12e8cada9b582af8e819b46276c3082b97e"
+    },
+    {
+      "path": "docs/08_WORK_PACKAGES_AND_DEPENDENCIES.md",
+      "bytes": 15073,
+      "sha256": "2f6f47eb41f4cdb1f1a1272742489064e0356a0642d612ed2573ea7ed690d7e9"
+    },
+    {
+      "path": "docs/09_ACCEPTANCE_AND_NEGATIVE_TESTS.md",
+      "bytes": 14813,
+      "sha256": "ce72de9941d5529e30617ff77a7fff6eb7a5772d7c2d8100e16a4779053c8d96"
+    },
+    {
+      "path": "docs/10_OPERATOR_RUNBOOK.md",
+      "bytes": 8463,
+      "sha256": "daf16a06a5c416e106ad626bb99496b9dbd65b794760012c3f83e24df9fe28ac"
+    },
+    {
+      "path": "docs/11_REFERENCE_CAMPAIGN.md",
+      "bytes": 4809,
+      "sha256": "09c0834905f3ffd5063e342b36ff7258488130da57708a71a2beb921a0b7d481"
+    },
+    {
+      "path": "docs/12_RISK_UNKNOWN_AND_DECISION_REGISTER.md",
+      "bytes": 11320,
+      "sha256": "fe2fc02d090c497ff8c390faec6422969163b7054f16e31765dbe99e7eed8ea7"
+    },
+    {
+      "path": "docs/13_TRACEABILITY_AND_COVERAGE.md",
+      "bytes": 6069,
+      "sha256": "584a1548dbf646d33c5dcc1b645a9c2bdb6cb537d88123c04d74b4334e032d53"
+    },
+    {
+      "path": "expression/visible_operator_decisions_candidate.yaml",
+      "bytes": 1157,
+      "sha256": "ac99aff15369733940049c75e2d23bb9c497ccd52f0a9d0ebe2af35e292ed584"
+    },
+    {
+      "path": "handoffs/CLAUDE_CODE_BOUND_DELEGATION.md",
+      "bytes": 7021,
+      "sha256": "b3ad2f5886072e004a3c52ba6d0f72c890ebe92c3eec63ae7660d314299e6de6"
+    },
+    {
+      "path": "handoffs/SEQUENCED_CAMPAIGN_HANDOFF.md",
+      "bytes": 3260,
+      "sha256": "4b1748be048aa1b72592db584e813478921582196183c0a804e4b00b2980a10b"
+    },
+    {
+      "path": "machine/TEST_MATRIX.csv",
+      "bytes": 10898,
+      "sha256": "8665aac7d0eeba203378575474aef99301ee3f4f94b877047de9206db1c1f2eb"
+    },
+    {
+      "path": "machine/WORK_ITEMS.csv",
+      "bytes": 2365,
+      "sha256": "6536c085cd2c4ca13624947460add301834f98b384a880e8ae0a5d906e881e5c"
+    },
+    {
+      "path": "machine/acceptance_tests.json",
+      "bytes": 24095,
+      "sha256": "dff23984ee7fc76655e2a40be1efec9a6329dd76f28adc4081247af692646692"
+    },
+    {
+      "path": "machine/decision_register.yaml",
+      "bytes": 7234,
+      "sha256": "b8aa32d6f4d2b10c82aeaaac55fe3ed279af293d4d1e7a73652de04819973c66"
+    },
+    {
+      "path": "machine/dependency_graph.json",
+      "bytes": 1782,
+      "sha256": "041ef6a1f4c34c7fd0d67ad0dfc07f56ea14912d495480a9096db91996a6f124"
+    },
+    {
+      "path": "machine/file_dispositions.json",
+      "bytes": 8129,
+      "sha256": "86b20c360dc8e2b5db995ef2af847dd0d0cb94fdbde5a2a73458632c7084cef8"
+    },
+    {
+      "path": "machine/readiness_gates.yaml",
+      "bytes": 1099,
+      "sha256": "50a614f71cc075a74244fd96e40bdad4e17e550677e581729ee7bcfb42beb229"
+    },
+    {
+      "path": "machine/source_baselines.json",
+      "bytes": 2178,
+      "sha256": "a07857e825c9a37a3b4748b6e9ff85008453737ba6ee75d6ffe0c0de0bf88efd"
+    },
+    {
+      "path": "machine/work_items.json",
+      "bytes": 13511,
+      "sha256": "13b18abb188bd1c8390c8bfe0434e2f08a9558533880fc7ad98f7ca31098a92a"
+    },
+    {
+      "path": "sources/CTO_Architecture_original.md",
+      "bytes": 53413,
+      "sha256": "56145e8eebd6839234ae5d5c631e28278f022c3d8aeba9e70542f6d85a79d893"
+    },
+    {
+      "path": "sources/CTO_Environment_Recon_2026-10-14.md",
+      "bytes": 18492,
+      "sha256": "3f305e31029c5f0494e79774b222c983c209ca2f280d2f67a2aacae5854b9b10"
+    },
+    {
+      "path": "sources/CTO_Implementation_Recon_original.md",
+      "bytes": 51140,
+      "sha256": "eef50444dfbc7a2d434f0a03672a8c1ceb60bd48e733b931dc4ca01ee39d5e42"
+    },
+    {
+      "path": "sources/CTO_Locked_Filetree_2026-10-14.md",
+      "bytes": 32385,
+      "sha256": "3ebe33f450280d129d85e5f24211b77a07e4e23202f15430c126d804d9e01815"
+    },
+    {
+      "path": "sources/visible_user_turns_PARTIAL.jsonl",
+      "bytes": 1733,
+      "sha256": "540a752b3ef7a63c34b6d36a42898ed2192e01a5808ef491925678b1d479b90f"
+    },
+    {
+      "path": "validation/ARCH_EXPRESSION_VALIDATION.json",
+      "bytes": 1517,
+      "sha256": "1e0cd4943cac33065f0d7d13726b2b6329b5301192c006d3f977b446df0ea6a9"
+    },
+    {
+      "path": "validation/LOCAL_STRUCTURE_REPORT.json",
+      "bytes": 632,
+      "sha256": "8439fd661b2f1c76ea1d1cce4ff2854e6118922da3db2b88278c042e89c80019"
+    },
+    {
+      "path": "validation/SOURCE_COMPLETENESS.md",
+      "bytes": 1054,
+      "sha256": "33941cebfe7fe2c113a172665530ac904e320fdb90e6bfce3a28cabfb7acd3a1"
+    },
+    {
+      "path": "validation/check_pack.py",
+      "bytes": 5984,
+      "sha256": "1f70f7102835ac096ebdf903eb8a05f3c1f1de8680e2d2eb02d22d417a2e8330"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PACK_CONSISTENCY_PASS_NOT_RUNTIME_PROOF",
+  "errors": [],
+  "source_documents": 4,
+  "work_packages": 19,
+  "test_cases": 90,
+  "file_dispositions": 46,
+  "readiness_gates": 5,
+  "source_completeness": "PARTIAL",
+  "canonical_producer_receipt": "NOT_PROVEN",
+  "runtime_tests_executed": false,
+  "host_live_proof": false,
+  "meaning": "Plan structure, source bytes, test refs, DAG and capture quotes checked only; no code installed or test run.",
+  "edition": "1.1",
+  "AgentPod_host_canary": "NOT_RUN",
+  "source_provenance": "PARTIAL",
+  "validation_type": "INTERNAL_CONSISTENCY_ONLY",
+  "decision_lock_count": 6
+}

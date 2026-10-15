@@ -1,0 +1,20 @@
+id,phase,title,dependencies,execution_mode,status,test_cases
+WP-00,F0,Exact source/head and ownership census,,none,NOT_STARTED,BT-005
+WP-01,F1,Implement CTO StateGraph and pure routing,WP-00,mock,NOT_STARTED,CP-001;CP-004;CP-006
+WP-02,F1,"Service executor, bootstrap composition, checkpoints",WP-01,mock,NOT_STARTED,BT-001;BT-002;BT-008;RC-001;RC-003
+WP-03,F1,CTO-domain test-first negative fixture suite,WP-00,mock,NOT_STARTED,BT-001;BT-014;IO-001;IO-004
+WP-04,F1,Docker build/compose with checkpoint volume,WP-02,mock,NOT_STARTED,RC-002;MS-008
+WP-05,F2,Canonical CTO actor/surface admission,WP-00,upstream_separate_authority,NOT_STARTED,BT-003;BT-004;BT-015
+WP-06,F2,CTO operating binding and memory principal,WP-05,admission_dependent,NOT_STARTED,BT-010;MS-001;MS-002;BT-016;MS-013
+WP-07,F3,AgentPod Hub MCP/APN and Cursor ACP fit/owner proof,WP-00,read_only_recon,NOT_STARTED,IO-013;MS-009;IO-018;IO-019;IO-022
+WP-08,F3,Root Autonomy mediated host operation journal,WP-06;WP-07,host_authorized,NOT_STARTED,IO-002;IO-003;IO-005;IO-023;IO-024
+WP-09,F3,AgentPod Cursor ACP and Claude station real canaries,WP-08;WP-17;WP-18,host_authorized,NOT_STARTED,IO-007;IO-009;IO-015;IO-020;IO-021;IO-025
+WP-10,F3,CTO AgentPod MCP dispatch / observe-first integration,WP-02;WP-09;WP-18,host_authorized,NOT_STARTED,IO-004;RC-003;RC-009;IO-017;IO-024
+WP-11,F4,MemorySDK/MemoryService CTO identity integration,WP-06,memory_authorized,NOT_STARTED,MS-001;MS-002;MS-010
+WP-12,F4,Real single-worker bounded source mutation fixture,WP-10;WP-11,scoped_live,NOT_STARTED,CP-011;IO-014;RC-005
+WP-13,F4,Publish path and human merge gate proof,WP-12,protected_authorized,NOT_STARTED,PB-001;PB-002;PB-003;PB-011
+WP-14,F5,Run complete reference Branch Consolidation campaign,WP-13,separately_authorized,NOT_STARTED,PB-006;PB-007;PB-008;PB-010
+WP-15,F6,"Reboot, backup, revoke and operational hardening",WP-12,live_environment,NOT_STARTED,RC-004;RC-007;BT-009
+WP-16,F6,Final no-shadow review and delivery evidence,WP-14;WP-15,review_only,NOT_STARTED,PB-010
+WP-17,F3,AgentPod Cursor ACP station descriptor or proven mediated alternative,WP-07,source_then_owner_authorized_provider,NOT_STARTED,IO-019;IO-020;IO-025
+WP-18,F3,Host-side L9 gate against AgentPod privilege bypass,WP-06;WP-08,scoped_after_owner_proof,NOT_STARTED,BT-017;BT-018;IO-017;IO-018;IO-022;IO-026;PB-011

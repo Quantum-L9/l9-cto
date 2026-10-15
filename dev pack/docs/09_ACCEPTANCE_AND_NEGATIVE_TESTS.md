@@ -1,0 +1,145 @@
+# 09 | Acceptance tests, adversarial matrix and evidence contracts
+
+## 9.1 Test truth rules
+
+A test case is not PASSED because it appears in this document. Report `NOT_RUN` until a real test command executes on a named implementation revision. Structural tests cannot attest host permissions. Mock tests cannot attest real SDK process startup. Successful worker output cannot attest external Git/CI effects. An aggregate green suite cannot negate a required negative test that was skipped or marked xfail. Unknown is never success.
+
+Each acceptance receipt must identify: exact target commit/tree, environment identity, test name, setup fixture, injected fault or witnessed external condition, expected and actual effects, exit/denial behavior, durable evidence (log/artifact/host record), owner and observation timestamp. For race/replay cases, include count of actual process spawns or independently observed remote mutations.
+
+## 9.2 Bootstrap and identity tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| BT-001 | unit | Docker process boots, source pin absent | inspectable service, `AUTHORITY_UNTRUSTED`, no worker request | F1 |
+| BT-002 | unit | actor string `l-cto` present only in env | no canonical identity, effect denied | F1 |
+| BT-003 | integration | admitted actor, omitted service surface | fail closed, no role alias | F2 |
+| BT-004 | integration | valid actor/surface, wrong projection digest | no acceptance, source conflict shown | F2 |
+| BT-005 | unit | two mismatched `.github` revisions supplied | reject mixed authority closure | F1 |
+| BT-006 | integration | authentic identity, expired delegation | host denies operation; no process spawn | F3 |
+| BT-007 | integration | valid grant but wrong repo/write paths | host denies before worktree | F3 |
+| BT-008 | unit | valid source but missing runtime checkpoint volume | no live READY; named recovery error | F1 |
+| BT-009 | integration | bootstrap successful then revoke grant | next attempted operation denied by host | F3 |
+| BT-010 | unit | Claude worker identity substituted for CTO | reject actor mismatch, no memory cross-auth | F1 |
+| BT-011 | integration | real host worker reports project settings missing | deny; no shadow policy fallback | F3 |
+| BT-012 | integration | duplicate active CTO commander for campaign | exclusive claim blocks second writer | F4 |
+| BT-013 | integration | installed SDK pin/version mismatch | worker unavailable, explicit report | F3 |
+| BT-014 | unit | stale previous READY receipt | action revalidates and blocks | F1 |
+| BT-015 | integration | Authority Resolver selects source revision but producer-verifiable assertion missing | no CTO effect; explicitly mark identity untrusted | F2 |
+| BT-016 | integration | AgentPod agent principal passed off as canonical CTO actor | deny: Hub principal does not substitute ActorIdentity | F2 |
+| BT-017 | integration | Gateway grants capability then upstream role or lease revoked before host effect | host rechecks, denies effect, no worker spawn | F3 |
+| BT-018 | security | CTO coordinator tries to perform worker repository write directly | role capability denies; only separately leased worker can mutate | F3 |
+
+## 9.3 Campaign and contract tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| CP-001 | unit | campaign missing explicit objective/acceptance | stage blocked, no action selected | F1 |
+| CP-002 | unit | campaign references nonexistent native contract | precise missing owner/ref, not a new schema | F1 |
+| CP-003 | unit | native contract structurally valid but no permission | denied at host-authority seam | F1/F3 |
+| CP-004 | unit | stage predecessor not accepted | no stage advancement or worker spawn | F1 |
+| CP-005 | integration | target SHA moved after intake | invalidates target evidence; revalidate before effect | F3 |
+| CP-006 | unit | LLM recommends out-of-scope mutation | deterministic gate denies, record observation | F1 |
+| CP-007 | unit | stale memory recalls superseded decision | current canonical source prevails, stale note surfaced | F1 |
+| CP-008 | unit | unresolved architectural contradiction | escalation; no frozen-envelope rewrite | F1 |
+| CP-009 | integration | wrong target worktree owner | no foreign dirty file touched | F3 |
+| CP-010 | unit | reference pack missing three native directories | inspection only; exact blockers listed | F1/F5 |
+| CP-011 | integration | independent review absent | worker success but `VERIFY_PENDING` | F4 |
+| CP-012 | integration | PR head changed after successful CI | invalidate affected CI/review/acceptance | F4 |
+
+## 9.4 Host launch and idempotency tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| IO-001 | unit | first valid mock operation | one durable acceptance, exactly one simulated launch | F1 |
+| IO-002 | unit | identical operation ID + identical fingerprint | return existing operation; spawn count still one | F1 |
+| IO-003 | unit | identical ID + different digest | conflict denied, no spawn | F1 |
+| IO-004 | fault | host executed effect but submit ACK lost | CTO `observe` first, no second effect | F1 mock; F3 host |
+| IO-005 | fault | host dies after durable accepted record, before spawn | resume reconciles state without unsafe double-spawn | F3 |
+| IO-006 | fault | host dies after spawn, before writing terminal | observed process/external state reconciled, unknown preserved | F3 |
+| IO-007 | integration | real SDK receives read-only canary | actual ResultMessage, journal, no repo mutation | F3 |
+| IO-008 | integration | fake SDK `success` with no host process | not eligible for `LIVE-PROVED` or accepted | F3 |
+| IO-009 | integration | unauthorized attempt to set bypassPermissions | adapter/host refuses; project hooks remain | F3 |
+| IO-010 | integration | host worktree fails to create | preserve rejection, no execution | F3 |
+| IO-011 | integration | request exceeds worker budget/turn bounds | refusal or bounded stop with accurate terminal cause | F3 |
+| IO-012 | fault | cancellation after side effect | report uncertain until Git/effect reconciliation | F3 |
+| IO-013 | security | DTO contains arbitrary host shell command | command not executed; fixed owner-controlled executable only | F3 |
+| IO-014 | integration | SDK default report overwritten by next task | prior operation evidence preserved by unique journal refs | F3 |
+| IO-015 | integration | signed token/grant not readable by worker UID | OS boundary denies, not just hook denial | F3 |
+| IO-016 | fault | lease expires while worker still alive | new effects denied; observe/cancel or escalate per contract | F3 |
+| IO-017 | integration | AgentPod dispatch submitted without current root L9 authorization | host effect denied; no station task | F3 |
+| IO-018 | security | CTO AgentPod principal requests general terminal or fs.write | deny at Hub/host policy; cannot reach unconfined host shell | F3 |
+| IO-019 | integration | Cursor CLI present but AgentPod registry has no Cursor ACP station descriptor | reports worker unsupported; no READY from node online | F3 |
+| IO-020 | integration | AgentPod Cursor ACP read-only canary with project policy | real session new/prompt/updates/cancel, project rules present, effect scope enforced | F3 |
+| IO-021 | integration | AgentPod Claude Code station canary with native L9 code contract | real read-only session, hooks and per-task lease verified; outcome observed | F3 |
+| IO-022 | security | CTO presents AgentPod fleet/operator token or APN node secret | hub agent-scope route refuses identity/permission confusion | F3 |
+| IO-023 | fault | APN disconnect after host accepted same operation ID | reconnect observes existing op; spawn count exactly one | F3 |
+| IO-024 | fault | Hub reconnect with request replay and original receipt delayed | journal id+digest enforces idempotency; no second external effect | F3 |
+| IO-025 | security | ACP permission auto-answer allow-always without L9 grant | host denies privileged tool irrespective of ACP answer | F3 |
+| IO-026 | security | ACP/Claude station cannot consult current host-side L9 gateway | deny real effect; only mock/no-op remains | F3 |
+
+## 9.5 Recovery and persistence tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| RC-001 | unit | checkpoint with `thread_id` restored by second instance | state resumes from next node, no repeated node 1 | F1 |
+| RC-002 | integration | container deleted and recreated | checkpoint survives named volume, same campaign | F1 |
+| RC-003 | fault | CTO crashes just after host accepts | on return observe by same op id before submit | F1/F3 |
+| RC-004 | fault | Mac reboot with host worker interrupted | checkpoint + host journal + remote effect reconciled | F6 |
+| RC-005 | unit | checkpoint reports success, GitHub effect absent | acceptance blocked despite graph state | F1 |
+| RC-006 | fault | journal record absent but legacy worker possibly ran | unknown/escalate, no inference of safe retry | F3 |
+| RC-007 | unit | checkpoint corrupt/unreadable | fail closed for unresolved effect, diagnostics preserved | F1 |
+| RC-008 | integration | different logical campaign tries reused thread id | identity mismatch denied or isolated | F3 |
+| RC-009 | integration | task immutable fingerprint changes during restart | reject replay conflict, rebind through authority | F3 |
+| RC-010 | fault | network unavailable to GitHub after worker result | `VERIFY_PENDING`, no completion or risky duplicate | F3/F4 |
+
+## 9.6 Memory/security tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| MS-001 | integration | signed CTO principal hydrates allowed namespace | authorized data and provenance returned | F4 |
+| MS-002 | integration | CTO attempts another private namespace | MemoryService denies | F4 |
+| MS-003 | integration | Claude principal presented as CTO | actor assertion/grant mismatch denied | F4 |
+| MS-004 | integration | memory bound package differs from v2.6.0 pinned contract | runtime binding reports unbound or compatible only as actually allowed | F4 |
+| MS-005 | unit | optional memory transport outage | honest degraded status; permitted read-only actions continue | F1 |
+| MS-006 | unit | mandatory memory dependency outage | stage does not execute | F1 |
+| MS-007 | integration | unverified worker prose offered as shared fact | governed write/promotion rejected or deferred | F4 |
+| MS-008 | security | CTO container tries Docker socket or Mac home | denied by actual runtime mount/privilege boundary | F1/F3 |
+| MS-009 | security | worker attempts to read human grant issuer file | OS denies, even without hook | F3 |
+| MS-010 | integration | stale signed memory assertion | MemoryService refuses writes and reports exact cause | F4 |
+| MS-011 | unit | no context matches search | empty result distinguished from transport/service failure | F1 |
+| MS-012 | integration | memory write approved but externally verified source later revoked | supersession/reconciliation, not silent global truth | F4 |
+| MS-013 | security | AgentPod Hub principal credential used as MemoryService author identity | MemoryService signed assertion required; cross-principal write denied | F4 |
+
+## 9.7 Publication and reference campaign tests
+
+| ID | Level | Scenario | Required observation | Phase |
+|---|---|---|---|---|
+| PB-001 | integration | authorized test PR publisher path | actual PR created/reused, exact head and base recorded | F4 |
+| PB-002 | security | green CI but no human exact-head merge grant | `MERGE_PENDING`, no merge | F4 |
+| PB-003 | security | spoofed agent-written merge receipt | merge effect denied | F4 |
+| PB-004 | integration | PR head moves after issued grant | grant invalid at changed head | F4 |
+| PB-005 | integration | stacked PR merge candidate | ancestry-safe method under applicable grant; no guessed squash | F5 |
+| PB-006 | integration | two worker branches overlap | dedicated worktrees and claim conflict/controlled integration | F5 later |
+| PB-007 | campaign | five worker results individually green; integrated result breaks | integration repair + full relevant reverification | F5 later |
+| PB-008 | campaign | post-merge hosted Claude activation missing | no reference campaign closure | F5 |
+| PB-009 | campaign | missing native contract directory | no executable reference delegation | F5 |
+| PB-010 | campaign | final all-stage acceptance current and independently observed | exact `COMPLETED_VERIFIED` with citations | F5 |
+| PB-011 | security | AgentPod privileged shell route attempts protected merge grant | no host grant access or merge; stop MERGE_PENDING | F4 |
+
+## 9.8 Release gates and evidence completeness
+
+**F1 mock GO:** source-bound code, graph validated, mock test suite passes, restart persistent, false-ready negatives, no reachable real host effects. **NO-GO** if mock reports an external effect as live, if state resurrects a mutating call, or if compose exposes host credentials.
+
+**F2 identity GO:** independently admitted source and signed/current identity + separately scoped delegated authorization and memory principal. **NO-GO** on locally invented actor string, unsigned profile or wildcard grant.
+
+**F3 worker GO:** real AgentPod Mac APN Cursor ACP and Claude Code canaries with restricted principal, mandatory root-autonomy host gate, journal and replay proof, host denial tests and no duplicate spawn. **NO-GO** on unauthenticated IPC, same-UID merge grant access, a report-only stub or missing shutdown/recovery semantics.
+
+**F4 actual code GO:** one bounded actual source delta in disposable/approved worktree and independent test/effect verification, correct memory permissions if used. **NO-GO** on worker-prose green, unbounded PR publication or stale target SHA.
+
+**F5 reference GO:** complete native source pack, authorized stage succession, real effect and acceptance evidence, strict protected actions. **NO-GO** if required predecessor admission, integrator closure or hosted activation absent.
+
+**F6 promotion GO:** reboot/backup, corrupt data, grant revocation, host outage, operator status, secrets isolation and rollback drills pass live under final release digest. **NO-GO** otherwise.
+
+## 9.9 Test implementation guidance
+
+Reuse `tests/workflows/test_langgraph_durable_resume.py`, SDK tests, memory cross-repo integration, root autonomy tests and existing merge-gate negative cases. Add CTO-domain-only test cases to `tests/workflows/test_cto_runtime.py`, and regression cases within existing owner suites when touched. Test isolation: fake effect port for F1, real host canary on disposable repo only for F3+, never make CI depend on operator's live Mac. Mark optional environment-based integration tests as NOT_RUN, not PASS, when absent.

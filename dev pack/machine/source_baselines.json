@@ -1,0 +1,46 @@
+{
+  "authoritative_implementation_proof": false,
+  "canonical_resolution_receipt": null,
+  "id": "CTO-SOURCE-CENSUS-2026-10-14",
+  "live_docker_recovery_proof": null,
+  "live_host_worker_proof": null,
+  "memory_cto_grant_proof": null,
+  "original_conversation_boundary": "PARTIAL_NOT_INDEPENDENTLY_EXPORTED",
+  "scope_note": "Exact-source inspection does not grant admission, live readiness, or code mutation.",
+  "source_documents": {
+    "CTO_Architecture_original.md": {
+      "sha256": "56145e8eebd6839234ae5d5c631e28278f022c3d8aeba9e70542f6d85a79d893",
+      "size_bytes": 53413
+    },
+    "CTO_Environment_Recon_2026-10-14.md": {
+      "sha256": "3f305e31029c5f0494e79774b222c983c209ca2f280d2f67a2aacae5854b9b10",
+      "size_bytes": 18492
+    },
+    "CTO_Implementation_Recon_original.md": {
+      "sha256": "eef50444dfbc7a2d434f0a03672a8c1ceb60bd48e733b931dc4ca01ee39d5e42",
+      "size_bytes": 51140
+    },
+    "CTO_Locked_Filetree_2026-10-14.md": {
+      "sha256": "3ebe33f450280d129d85e5f24211b77a07e4e23202f15430c126d804d9e01815",
+      "size_bytes": 32385
+    }
+  },
+  "status": "SOURCE_OBSERVED_ONLY",
+  "verified_main_heads": {
+    "Quantum-L9/.github": "d4397e53f8f4c23458a80f87db9552463ad9e26f",
+    "Quantum-L9/Cursor-Governance": "4cc0d7dc858021bc8e2a95a904e2945fd3d3acba",
+    "Quantum-L9/l9-graphiti-memory": "441b741e31a7bb5a57849e5b49b97465b1c7ee58"
+  },
+  "verified_projection_receipt": null,
+  "revision_notes": "v1.0 original heads are historical; v1.1 later reviewed sources do not establish test execution or canonical producer receipts.",
+  "later_reviewed_main_heads": {
+    "Quantum-L9/.github": "d4397e53f8f4c23458a80f87db9552463ad9e26f",
+    "Quantum-L9/Cursor-Governance": "0bb60d78f8bdc22d09bd8464830cdfa62d61d0ed",
+    "SuperJackfruitLabs/agentpod": "e647ab22722819a23329e40152ff442977046705"
+  },
+  "external_cursor_acp": "https://prod.cursor.com/docs/cli/acp",
+  "agentpod_harness_registry_cursor_present": false,
+  "agentpod_host_principal_proven": false,
+  "root_autonomy_cto_operational_binding_proven": false,
+  "selected_transport": "AgentPod Hub agent MCP -> enrolled Mac APN -> restricted station -> Cursor CLI ACP or Claude Code"
+}

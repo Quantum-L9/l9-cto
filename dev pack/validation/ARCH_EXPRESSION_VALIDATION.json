@@ -1,0 +1,41 @@
+{
+  "artifact_count": 1,
+  "assurance_boundary": "Source-reference, structural, quote, digest, message-claim and pointer checks only; operator reference authenticity, donor exhaustiveness, semantic correctness, reviewer independence and L9 admission are NOT mechanically proven",
+  "canonical_revision": "d4397e53f8f4c23458a80f87db9552463ad9e26f",
+  "claim_count": 11,
+  "errors": [],
+  "independent_omission_inventory_reconciled": false,
+  "material_claim_count": 11,
+  "source_reference_matched": false,
+  "source_sha256": "540a752b3ef7a63c34b6d36a42898ed2192e01a5808ef491925678b1d479b90f",
+  "status": "PROVISIONAL_CHECKED",
+  "subject": "l9-cto-mac-docker-executive",
+  "warnings": [
+    {
+      "code": "SOURCE_BOUNDARY_UNVERIFIED",
+      "message": "no independently supplied original donor; self-declared full_declared does not certify completeness"
+    },
+    {
+      "code": "DONOR_INCOMPLETE",
+      "message": "donor not declared complete; full coverage is not eligible"
+    },
+    {
+      "code": "AUTHORITY_UNRESOLVED",
+      "message": "canonical resolution incomplete; cannot claim semantically qualified"
+    },
+    {
+      "code": "SOURCE_REVIEW",
+      "message": "full donor coverage review not declared"
+    },
+    {
+      "code": "INDEPENDENT_OMISSION_REVIEW",
+      "message": "no completed independent omission review"
+    },
+    {
+      "code": "INDEPENDENT_RECONSTRUCTION",
+      "message": "independent reconstruction NOT proven"
+    }
+  ],
+  "edition": "1.1",
+  "validation_exit_code": 2
+}

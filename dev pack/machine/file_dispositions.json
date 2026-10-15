@@ -1,0 +1,246 @@
+{
+  "pack": "CTO-DEV-PACK-001",
+  "repository": "https://github.com/Quantum-L9/Cursor-Governance",
+  "source_baseline": "0bb60d78f8bdc22d09bd8464830cdfa62d61d0ed",
+  "paths": [
+    {
+      "path": "workflows/dags/_runtime/durable_checkpointer.py",
+      "disposition": "REUSE",
+      "rationale": "Shared durable SqliteSaver"
+    },
+    {
+      "path": "workflows/dags/cto/graph.py",
+      "disposition": "NEW_F1",
+      "rationale": "Side-effect-free CTO graph topology"
+    },
+    {
+      "path": "workflows/dags/cto/executor.py",
+      "disposition": "NEW_F1",
+      "rationale": "Service bootstrap, graph runner and state restoration"
+    },
+    {
+      "path": "ops/cto/Dockerfile",
+      "disposition": "NEW_F1",
+      "rationale": "Least privilege executive image"
+    },
+    {
+      "path": "ops/cto/compose.yaml",
+      "disposition": "NEW_F1",
+      "rationale": "Docker Desktop service and durable named volume"
+    },
+    {
+      "path": "tests/workflows/test_cto_runtime.py",
+      "disposition": "NEW_F1",
+      "rationale": "CTO domain and negative test witnesses"
+    },
+    {
+      "path": "environment/agents/adapters/claude-agent-sdk/l9_agent.py",
+      "disposition": "REUSE_CONDITIONAL_EXTEND",
+      "rationale": "Existing SDK launcher preserved; AgentPod Claude ACP has priority for host transport; prove native L9 hook/contract parity."
+    },
+    {
+      "path": "environment/agents/adapters/claude-agent-sdk/host_bridge.py",
+      "disposition": "DEFER_NOT_DEFAULT_F3",
+      "rationale": "Superseded generic-bridge default: AgentPod selected. New bridge only after separate proven owner gap and authorization."
+    },
+    {
+      "path": "environment/agents/adapters/claude-agent-sdk/validate_agent_sdk_env.py",
+      "disposition": "REUSE",
+      "rationale": "No shadow SDK policy"
+    },
+    {
+      "path": "environment/agents/agent_registry.yaml",
+      "disposition": "EXTEND_AFTER_ADMISSION",
+      "rationale": "Operating binding and memory grants"
+    },
+    {
+      "path": "environment/agents/PEER_RUNTIME_BINDINGS.yaml",
+      "disposition": "CONDITIONAL_EXTEND",
+      "rationale": "Only admitted provider requires"
+    },
+    {
+      "path": "autonomy/runtime/engine.py",
+      "disposition": "REUSE",
+      "rationale": "Root execution authority"
+    },
+    {
+      "path": "autonomy/runtime/store.py",
+      "disposition": "CONDITIONAL_EXTEND_F3",
+      "rationale": "Existing transactional store host journal candidate"
+    },
+    {
+      "path": "autonomy/runtime/claims.py",
+      "disposition": "REUSE",
+      "rationale": "Root campaign resource claims"
+    },
+    {
+      "path": "autonomy/runtime/leases.py",
+      "disposition": "REUSE",
+      "rationale": "Worker leases"
+    },
+    {
+      "path": "autonomy/adapters/orchestrator.py",
+      "disposition": "REUSE",
+      "rationale": "Descriptors and leases; no spawn"
+    },
+    {
+      "path": "autonomy/adapters/bridge.py",
+      "disposition": "REUSE_WHERE_APPLICABLE",
+      "rationale": "Root existing bridge contract"
+    },
+    {
+      "path": "autonomy/adapters/cursor/host_bridge.py",
+      "disposition": "READ_PATTERN",
+      "rationale": "Cursor-only host admission owner precedent"
+    },
+    {
+      "path": "ops/memory/runtime_binding.py",
+      "disposition": "REUSE",
+      "rationale": "Memory package and contract pin"
+    },
+    {
+      "path": "ops/memory/agent_identity.py",
+      "disposition": "CONDITIONAL_EXTEND",
+      "rationale": "Reserved l-cto; do not self-admit"
+    },
+    {
+      "path": "ops/memory/agent_assertion.py",
+      "disposition": "REUSE",
+      "rationale": "Signed principal assertion"
+    },
+    {
+      "path": "ops/memory/materialize_agent_authority.py",
+      "disposition": "REUSE",
+      "rationale": "Grant from active registry"
+    },
+    {
+      "path": "ops/memory/run_memory_mcp.sh",
+      "disposition": "REUSE_IF_APPLICABLE",
+      "rationale": "stdio signed door"
+    },
+    {
+      "path": "ops/scripts/agent_worktree_start.sh",
+      "disposition": "REUSE",
+      "rationale": "Isolated host worktree"
+    },
+    {
+      "path": "ops/scripts/worktree_add_wired.sh",
+      "disposition": "REUSE",
+      "rationale": "Wired worktree mechanics"
+    },
+    {
+      "path": "ops/scripts/open_pr_after_gate.sh",
+      "disposition": "REUSE",
+      "rationale": "Existing publisher path"
+    },
+    {
+      "path": "ops/autonomy/authorize_merge.py",
+      "disposition": "HUMAN_ONLY",
+      "rationale": "Never callable by CTO"
+    },
+    {
+      "path": "ops/autonomy/merge_gate.py",
+      "disposition": "REUSE",
+      "rationale": "Effect-gate merge protection"
+    },
+    {
+      "path": "ops/autonomy/stack_safe_merge.py",
+      "disposition": "REUSE_HUMAN_GRANT_ONLY",
+      "rationale": "Stack-safe protected merge path"
+    },
+    {
+      "path": "skills/l9-coding-agent/contracts/EXECUTION_CONTRACT.yaml",
+      "disposition": "REUSE_FROZEN",
+      "rationale": "Native coding execution contract"
+    },
+    {
+      "path": "skills/l9-coding-agent/scripts/validate_execution_contract.py",
+      "disposition": "REUSE",
+      "rationale": "Structural contract check only"
+    },
+    {
+      "path": "skills/l9-coding-agent/scripts/verify_canonical_binding.py",
+      "disposition": "REUSE_WITH_VERIFIED_PROJECTION",
+      "rationale": "Canonical binding verifier"
+    },
+    {
+      "path": "tests/workflows/test_langgraph_durable_resume.py",
+      "disposition": "REUSE",
+      "rationale": "Existing two-instance checkpoint test"
+    },
+    {
+      "path": ".claude/settings.json",
+      "disposition": "REUSE",
+      "rationale": "Host worker hooks and permissions"
+    },
+    {
+      "path": ".mcp.json",
+      "disposition": "REUSE",
+      "rationale": "Worker MCP settings, not CTO proof"
+    },
+    {
+      "path": "generated/governance/canonical_identity.yaml",
+      "disposition": "OWNER_GENERATED",
+      "rationale": "Never manually edit"
+    },
+    {
+      "path": "pyproject.toml",
+      "disposition": "REUSE",
+      "rationale": "LangGraph and optional SDK pinned deps"
+    },
+    {
+      "path": "uv.lock",
+      "disposition": "REUSE",
+      "rationale": "Exact lock; conditional justified edit"
+    },
+    {
+      "path": "filetree.md",
+      "disposition": "OWNER_GENERATED",
+      "rationale": "Never manually edit"
+    },
+    {
+      "path": "environment/program-execution/",
+      "disposition": "EXCLUDE",
+      "rationale": "Legacy eviction target"
+    },
+    {
+      "path": "autonomy/runtime/capability_gateway.py",
+      "disposition": "REUSE_HOST_REENFORCE",
+      "rationale": "Existing role/lease/campaign scoped authorization; must recheck host effect"
+    },
+    {
+      "path": "autonomy/runtime/receipts.py",
+      "disposition": "REUSE",
+      "rationale": "Existing signed/hash-chained campaign evidence, not independent external-effect proof"
+    },
+    {
+      "path": "autonomy/adapters/conformance.py",
+      "disposition": "REUSE_EXTEND_IF_PROVEN",
+      "rationale": "Existing adapter conformance; must not confuse structural PASS with live ACP auth"
+    },
+    {
+      "path": "autonomy/adapters/protocol.py",
+      "disposition": "REUSE",
+      "rationale": "Existing adapter feature/mode contract"
+    },
+    {
+      "path": "autonomy/policies/role-capabilities.json",
+      "disposition": "REUSE_POLICY",
+      "rationale": "Existing coordinator vs executor/remediator role and global forbidden capabilities"
+    },
+    {
+      "path": "autonomy/policies/adapter-requirements.json",
+      "disposition": "REUSE_POLICY",
+      "rationale": "Existing mandatory mediation, agent identity, leases and human gate requirements"
+    }
+  ],
+  "external_path_notice": "apps/node-agent/... belongs to SuperJackfruitLabs/agentpod, NEVER a path to mutate in Cursor-Governance",
+  "external_paths": [
+    {
+      "repository": "https://github.com/SuperJackfruitLabs/agentpod",
+      "path": "apps/node-agent/cmd/agentpod-node/registry.go",
+      "disposition": "EXTERNAL_READ_ONLY",
+      "rationale": "AgentPod external owner; no Cursor descriptor at inspected revision; adapter change needs separate write grant"
+    }
+  ]
+}
